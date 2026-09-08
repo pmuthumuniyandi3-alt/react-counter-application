@@ -1,0 +1,153 @@
+/* Counter Card Container */
+.counter-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 40px 32px;
+  max-width: 440px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Project Title */
+.counter-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+/* Counter Display */
+.counter-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 110px;
+  margin-bottom: 12px;
+}
+
+.count-value {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1;
+  user-select: none;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Conditional "Minimum limit reached" message */
+.limit-message {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #dc2626;
+  background-color: #fee2e2;
+  border: 1px solid #fca5a5;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button Group Row */
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+/* Base Button Styles */
+.btn {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+/* Increment Button */
+.btn-increment {
+  background-color: #10b981;
+  color: #ffffff;
+}
+
+.btn-increment:hover {
+  background-color: #059669;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Decrement Button */
+.btn-decrement {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.btn-decrement:hover {
+  background-color: #2563eb;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Reset Button - Visually Different */
+.btn-reset {
+  background-color: #f1f5f9;
+  color: #e11d48;
+  border: 1.5px solid #fda4af;
+}
+
+.btn-reset:hover {
+  background-color: #e11d48;
+  color: #ffffff;
+  border-color: #e11d48;
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 480px) {
+  .counter-card {
+    padding: 30px 20px;
+  }
+
+  .counter-title {
+    font-size: 1.5rem;
+  }
+
+  .count-value {
+    font-size: 4rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 12px 0;
+  }
+}
