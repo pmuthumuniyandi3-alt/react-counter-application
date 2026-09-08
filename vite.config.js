@@ -17,9 +17,14 @@ function devHtmlPlugin() {
   };
 }
 
+// https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), devHtmlPlugin()],
   base: './',
+  server: {
+    open: true, // Automatically opens Google Chrome / default browser on dev start
+    port: 5173,
+  },
   build: {
     rollupOptions: {
       input: {
